@@ -1,0 +1,25 @@
+{
+  "eyebrow": "Jordan Kenchen",
+  "headline": "Hospitality & Travel",
+  "intro": "Hotel stays, property tours and room walk-throughs in long-form and short-form video.",
+  "hero_image": "/uploads/travel.webp",
+  "hero_image_alt": "TODO(copy)",
+  "text_blocks": [],
+  "videos": [
+    {
+      "title": "Nobu Hotel Atlanta | Luxury Stay & Property Tour",
+      "url": "https://youtu.be/JgvZCvN4veY",
+      "layout": "auto",
+      "caption": "",
+      "cover": ""
+    },
+    {
+      "title": "Property Highlights & Room Tour",
+      "url": "https://www.tiktok.com/@jordankenchen/video/7428303538939497774",
+      "layout": "auto",
+      "caption": "",
+      "cover": ""
+    }
+  ],
+  "gallery": []
+}

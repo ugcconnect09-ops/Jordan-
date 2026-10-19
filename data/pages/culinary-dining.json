@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Jordan Kenchen",
+  "headline": "Culinary & Dining",
+  "intro": "Chef features, steakhouse reviews and dining vlogs in long-form and short-form video.",
+  "hero_image": "/uploads/culinary.webp",
+  "hero_image_alt": "TODO(copy)",
+  "text_blocks": [],
+  "videos": [
+    {
+      "title": "ML Steakhouse | Commercial Chef Feature & Review",
+      "url": "https://youtu.be/qYQVk4_uwwo",
+      "layout": "auto",
+      "caption": "",
+      "cover": ""
+    },
+    {
+      "title": "Mastro's Steakhouse LA | Dining Vlog",
+      "url": "https://youtu.be/SjfsrKN5r9Y",
+      "layout": "auto",
+      "caption": "",
+      "cover": ""
+    },
+    {
+      "title": "Dining Experience & Menu Highlights",
+      "url": "https://www.tiktok.com/@jordankenchen/video/7527765454979435831",
+      "layout": "auto",
+      "caption": "",
+      "cover": ""
+    }
+  ],
+  "gallery": []
+}

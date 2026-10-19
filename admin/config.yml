@@ -1,0 +1,244 @@
+backend:
+  name: github
+  repo: OWNER/REPO            # HUMAN TASK: exact spelling of the real repo; a typo gives "You don't have access to the ... repository"
+  branch: dev                 # build phase. MUST be main in the final merge (see pre-merge checklist)
+
+media_folder: public/uploads
+public_folder: /uploads
+
+# Nesting confirmed against @sveltia/cms 0.173.0 type definitions:
+# media_libraries.default.config.{max_file_size (bytes), transformations.{raster_image, svg}}
+media_libraries:
+  default:
+    config:
+      max_file_size: 5242880   # 5 MB in bytes
+      transformations:
+        raster_image: { format: webp, quality: 82, width: 2400 }
+        svg: { optimize: true }
+
+collections:
+  - name: content
+    label: Site content
+    files:
+      - name: site
+        label: Site settings
+        file: public/data/site.json
+        format: json
+        fields:
+          - { label: Brand name, name: brand_name, widget: string }
+          - { label: Management line, name: management, widget: string, required: false, hint: "Shown in the footer" }
+          - { label: Public contact email, name: contact_email_display, widget: string, required: false, hint: "Leave empty to show only the inquiry form" }
+          - label: Social links
+            name: socials
+            widget: list
+            summary: "{{fields.platform}}"
+            fields:
+              - { label: Platform, name: platform, widget: select, options: [Instagram, TikTok, YouTube] }
+              - { label: Handle, name: handle, widget: string, hint: "For example @jordankenchen" }
+              - { label: Link, name: url, widget: string, pattern: ['^https://', "Must start with https://"] }
+          - { label: Footer note, name: footer_note, widget: string, required: false }
+
+      - name: home
+        label: Home page
+        file: public/data/home.json
+        format: json
+        fields:
+          - label: Top of page
+            name: hero
+            widget: object
+            fields:
+              - { label: Small label above the name, name: eyebrow, widget: string, required: false }
+              - { label: Headline, name: headline, widget: string }
+              - { label: Intro line, name: intro, widget: text }
+              - { label: Photo, name: image, widget: image, hint: "Under 5 MB. Portrait or wide both work." }
+              - { label: Photo description, name: image_alt, widget: string, hint: "Short description for accessibility" }
+          - { label: Brand strip title, name: logos_heading, widget: string, default: "Trusted by" }
+          - label: Brand logos
+            name: logos
+            widget: list
+            summary: "{{fields.name}}"
+            hint: "Tick or untick 'Show on site' to hide or show a logo. Use a transparent PNG or SVG, under 5 MB."
+            fields:
+              - { label: Brand name, name: name, widget: string }
+              - { label: Logo, name: image, widget: image }
+              - { label: Show on site, name: visible, widget: boolean, default: true }
+          - { label: Stats title, name: stats_heading, widget: string, default: "By the numbers" }
+          - label: Stats
+            name: stats
+            widget: list
+            summary: "{{fields.value}} {{fields.label}}"
+            hint: "The first stat is shown large."
+            fields:
+              - { label: Number, name: value, widget: string, hint: "Type it exactly as it should appear, e.g. 500K+ or 4.1%" }
+              - { label: What it measures, name: label, widget: string }
+              - { label: Platform tag, name: tag, widget: select, options: ["All platforms", Instagram, TikTok, YouTube], default: "All platforms" }
+          - label: Audience
+            name: audience
+            widget: object
+            fields:
+              - { label: Age range, name: age_range, widget: string }
+              - { label: Who they are, name: gender, widget: string }
+              - { label: Key markets, name: markets, widget: list, field: { label: Market, name: market, widget: string } }
+          - label: Page cards
+            name: vertical_cards
+            widget: object
+            fields:
+              - label: Hospitality & Travel
+                name: hospitality_travel
+                widget: object
+                fields:
+                  - { label: Short description, name: blurb, widget: text }
+                  - { label: Photo, name: image, widget: image }
+                  - { label: Photo description, name: image_alt, widget: string }
+              - label: Culinary & Dining
+                name: culinary_dining
+                widget: object
+                fields:
+                  - { label: Short description, name: blurb, widget: text }
+                  - { label: Photo, name: image, widget: image }
+                  - { label: Photo description, name: image_alt, widget: string }
+              - label: Style & Grooming
+                name: style_grooming
+                widget: object
+                fields:
+                  - { label: Short description, name: blurb, widget: text }
+                  - { label: Photo, name: image, widget: image }
+                  - { label: Photo description, name: image_alt, widget: string }
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - { label: Title, name: heading, widget: string }
+              - { label: Text, name: body, widget: text, hint: "Leave a blank line between paragraphs" }
+          - label: Contact section
+            name: contact
+            widget: object
+            fields:
+              - { label: Title, name: heading, widget: string }
+              - { label: Intro, name: intro, widget: text, required: false }
+
+      - name: hospitality-travel
+        label: Hospitality & Travel page
+        file: public/data/pages/hospitality-travel.json
+        format: json
+        fields:
+          - { label: Small label, name: eyebrow, widget: string, required: false }
+          - { label: Headline, name: headline, widget: string }
+          - { label: Intro, name: intro, widget: text }
+          - { label: Top photo, name: hero_image, widget: image }
+          - { label: Top photo description, name: hero_image_alt, widget: string }
+          - label: Text sections
+            name: text_blocks
+            widget: list
+            required: false
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Title, name: heading, widget: string, required: false }
+              - { label: Text, name: body, widget: text }
+          - label: Videos
+            name: videos
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            hint: "Paste the video link. The shape (wide or vertical) is detected automatically. Videos must be public with embedding on."
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Video link
+                name: url
+                widget: string
+                hint: "YouTube watch link, youtu.be link, YouTube Short, or the full TikTok link (tiktok.com/@name/video/...)"
+                pattern: ['^https://((www\.|m\.)?youtube\.com/(watch\?v=|shorts/|embed/)[\w-]{11}|youtu\.be/[\w-]{11}|(www\.)?tiktok\.com/@[\w.\-]+/video/\d+)', "Paste the full video link. TikTok short links (vm.tiktok.com) do not work: open the video and copy the full address."]
+              - { label: Shape, name: layout, widget: select, options: [{ label: "Auto (recommended)", value: auto }, { label: Widescreen, value: wide }, { label: Vertical, value: vertical }], default: auto }
+              - { label: Caption, name: caption, widget: string, required: false }
+              - { label: Cover image (optional, for TikTok), name: cover, widget: image, required: false }
+          - label: Photo strip
+            name: gallery
+            widget: list
+            required: false
+            fields:
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: alt, widget: string }
+
+      - name: culinary-dining
+        label: Culinary & Dining page
+        file: public/data/pages/culinary-dining.json
+        format: json
+        fields:
+          - { label: Small label, name: eyebrow, widget: string, required: false }
+          - { label: Headline, name: headline, widget: string }
+          - { label: Intro, name: intro, widget: text }
+          - { label: Top photo, name: hero_image, widget: image }
+          - { label: Top photo description, name: hero_image_alt, widget: string }
+          - label: Text sections
+            name: text_blocks
+            widget: list
+            required: false
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Title, name: heading, widget: string, required: false }
+              - { label: Text, name: body, widget: text }
+          - label: Videos
+            name: videos
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            hint: "Paste the video link. The shape (wide or vertical) is detected automatically. Videos must be public with embedding on."
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Video link
+                name: url
+                widget: string
+                hint: "YouTube watch link, youtu.be link, YouTube Short, or the full TikTok link (tiktok.com/@name/video/...)"
+                pattern: ['^https://((www\.|m\.)?youtube\.com/(watch\?v=|shorts/|embed/)[\w-]{11}|youtu\.be/[\w-]{11}|(www\.)?tiktok\.com/@[\w.\-]+/video/\d+)', "Paste the full video link. TikTok short links (vm.tiktok.com) do not work: open the video and copy the full address."]
+              - { label: Shape, name: layout, widget: select, options: [{ label: "Auto (recommended)", value: auto }, { label: Widescreen, value: wide }, { label: Vertical, value: vertical }], default: auto }
+              - { label: Caption, name: caption, widget: string, required: false }
+              - { label: Cover image (optional, for TikTok), name: cover, widget: image, required: false }
+          - label: Photo strip
+            name: gallery
+            widget: list
+            required: false
+            fields:
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: alt, widget: string }
+
+      - name: style-grooming
+        label: Style & Grooming page
+        file: public/data/pages/style-grooming.json
+        format: json
+        fields:
+          - { label: Small label, name: eyebrow, widget: string, required: false }
+          - { label: Headline, name: headline, widget: string }
+          - { label: Intro, name: intro, widget: text }
+          - { label: Top photo, name: hero_image, widget: image }
+          - { label: Top photo description, name: hero_image_alt, widget: string }
+          - label: Text sections
+            name: text_blocks
+            widget: list
+            required: false
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Title, name: heading, widget: string, required: false }
+              - { label: Text, name: body, widget: text }
+          - label: Videos
+            name: videos
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            hint: "Paste the video link. The shape (wide or vertical) is detected automatically. Videos must be public with embedding on."
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Video link
+                name: url
+                widget: string
+                hint: "YouTube watch link, youtu.be link, YouTube Short, or the full TikTok link (tiktok.com/@name/video/...)"
+                pattern: ['^https://((www\.|m\.)?youtube\.com/(watch\?v=|shorts/|embed/)[\w-]{11}|youtu\.be/[\w-]{11}|(www\.)?tiktok\.com/@[\w.\-]+/video/\d+)', "Paste the full video link. TikTok short links (vm.tiktok.com) do not work: open the video and copy the full address."]
+              - { label: Shape, name: layout, widget: select, options: [{ label: "Auto (recommended)", value: auto }, { label: Widescreen, value: wide }, { label: Vertical, value: vertical }], default: auto }
+              - { label: Caption, name: caption, widget: string, required: false }
+              - { label: Cover image (optional, for TikTok), name: cover, widget: image, required: false }
+          - label: Photo strip
+            name: gallery
+            widget: list
+            required: false
+            fields:
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: alt, widget: string }
