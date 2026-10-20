@@ -25,7 +25,7 @@
     },
     {
       "name": "Saks Fifth Avenue",
-      "image": "/uploads/logos/saks-fifth-avenue.webp",
+      "image": "/uploads/hugo-boss-logo-png_seeklogo-481587.webp",
       "visible": true
     },
     {
@@ -41,6 +41,11 @@
     {
       "name": "th",
       "image": "/uploads/logos/th.webp",
+      "visible": true
+    },
+    {
+      "name": "6mb image",
+      "image": "/uploads/6 mb iage.webp",
       "visible": true
     }
   ],
