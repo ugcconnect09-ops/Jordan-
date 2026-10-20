@@ -41,7 +41,7 @@
     {
       "name": "th",
       "image": "/uploads/logos/th.webp",
-      "visible": true
+      "visible": false
     }
   ],
   "stats_heading": "By the numbers",
