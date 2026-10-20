@@ -1,7 +1,8 @@
 backend:
   name: github
-  repo: OWNER/REPO            # HUMAN TASK: exact spelling of the real repo; a typo gives "You don't have access to the ... repository"
-  branch: dev                 # build phase. MUST be main in the final merge (see pre-merge checklist)
+  repo: ugcconnect09-ops/Jordan-
+  branch: main
+  base_url: https://sveltia-cms-auth.ugcconnect09.workers.dev# build phase. MUST be main in the final merge (see pre-merge checklist)
 
 media_folder: public/uploads
 public_folder: /uploads
