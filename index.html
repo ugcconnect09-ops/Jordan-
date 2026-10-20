@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jordan Kenchen | Media Kit</title>
+  <meta name="description" content="Jordan Kenchen is a lifestyle creator. Media kit and brand partnership portfolio, managed by Full Circle Management.">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jordan Kenchen">
+  <meta property="og:title" content="Jordan Kenchen | Media Kit">
+  <meta property="og:description" content="Jordan Kenchen is a lifestyle creator. Media kit and brand partnership portfolio, managed by Full Circle Management.">
+  <meta property="og:image" content="/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jordan Kenchen | Media Kit">
+  <meta name="twitter:description" content="Jordan Kenchen is a lifestyle creator. Media kit and brand partnership portfolio, managed by Full Circle Management.">
+  <meta name="twitter:image" content="/og-cover.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Syne:wght@500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preload" as="fetch" href="/data/site.json" crossorigin>
+  <link rel="preload" as="fetch" href="/data/home.json" crossorigin>
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <a class="brand" href="/">Jordan Kenchen</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/hospitality-travel/">Hospitality &amp; Travel</a>
+      <a href="/culinary-dining/">Culinary &amp; Dining</a>
+      <a href="/style-grooming/">Style &amp; Grooming</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-btn__label">Menu</span><span class="menu-btn__bars" aria-hidden="true"></span>
+    </button>
+  </header>
+  <div class="menu" id="menu">
+    <nav class="menu-nav" aria-label="Mobile">
+      <a href="/hospitality-travel/">Hospitality &amp; Travel</a>
+      <a href="/culinary-dining/">Culinary &amp; Dining</a>
+      <a href="/style-grooming/">Style &amp; Grooming</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+  <noscript><p class="notice-bar">Please enable JavaScript to view this page.</p></noscript>
+  <main id="main">
+    <section class="hero" id="hero" aria-label="Introduction"></section>
+    <section class="trust" id="logos" aria-label="Brands"></section>
+    <section class="section" id="stats"></section>
+    <section class="section section--raised" id="audience"></section>
+    <section class="section" id="verticals"></section>
+    <section class="section section--raised" id="about"></section>
+    <section class="section" id="contact">
+      <div class="wrap contact">
+        <div class="contact__side">
+          <p class="eyebrow reveal">Contact</p>
+          <h2 class="display h-section reveal" id="contact-heading">Brand inquiries</h2>
+          <p class="lede reveal" id="contact-intro"></p>
+          <div id="contact-socials"></div>
+        </div>
+        <form class="form reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New brand inquiry: Jordan Kenchen">
+          <div class="hp" aria-hidden="true">
+            <label>Leave this empty <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-company">Brand or company (optional)</label>
+            <input id="f-company" name="company" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" required></textarea>
+          </div>
+          <div>
+            <button class="btn btn--primary" type="submit">Send inquiry</button>
+          </div>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" id="footer"></footer>
+  <script type="module" src="/assets/js/app.js"></script>
+</body>
+</html>

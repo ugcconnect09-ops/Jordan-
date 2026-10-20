@@ -1,0 +1,25 @@
+{
+  "eyebrow": "Jordan Kenchen",
+  "headline": "Style & Grooming",
+  "intro": "Footwear, streetwear and on-foot styling in vertical short-form video.",
+  "hero_image": "/uploads/style.webp",
+  "hero_image_alt": "TODO(copy)",
+  "text_blocks": [],
+  "videos": [
+    {
+      "title": "Footwear & Streetwear Styling",
+      "url": "https://youtube.com/shorts/fy2qtBGh4cU",
+      "layout": "auto",
+      "caption": "",
+      "cover": ""
+    },
+    {
+      "title": "On-Foot Styling & Transit Essentials",
+      "url": "https://youtube.com/shorts/YyomRzPFj2Y",
+      "layout": "auto",
+      "caption": "",
+      "cover": ""
+    }
+  ],
+  "gallery": []
+}

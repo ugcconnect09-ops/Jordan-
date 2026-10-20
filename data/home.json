@@ -1,0 +1,125 @@
+{
+  "hero": {
+    "eyebrow": "Lifestyle Creator",
+    "headline": "Jordan Kenchen",
+    "intro": "Lifestyle creator across hospitality, dining and style, with 500K+ organic video views on YouTube, TikTok and Instagram.",
+    "image": "/uploads/home-hero.webp",
+    "image_alt": "Jordan Kenchen"
+  },
+  "logos_heading": "Featured brands",
+  "logos": [
+    {
+      "name": "givenchy",
+      "image": "/uploads/logos/givenchy-m.png",
+      "visible": true
+    },
+    {
+      "name": "hugo",
+      "image": "/uploads/logos/hugo.jpg",
+      "visible": true
+    },
+    {
+      "name": "nobu",
+      "image": "/uploads/logos/nobu.webp",
+      "visible": true
+    },
+    {
+      "name": "Saks Fifth Avenue",
+      "image": "/uploads/logos/saks-fifth-avenue.webp",
+      "visible": true
+    },
+    {
+      "name": "Steak",
+      "image": "/uploads/logos/steak.png",
+      "visible": true
+    },
+    {
+      "name": "la-grotta-title",
+      "image": "/uploads/logos/la-grotta-title.webp",
+      "visible": true
+    },
+    {
+      "name": "th",
+      "image": "/uploads/logos/th.webp",
+      "visible": true
+    }
+
+  ],
+  "stats_heading": "By the numbers",
+  "stats": [
+    {
+      "value": "500K+",
+      "label": "Organic video views across YouTube, TikTok and Instagram",
+      "tag": "All platforms"
+    },
+    {
+      "value": "53K+",
+      "label": "Instagram views",
+      "tag": "Instagram"
+    },
+    {
+      "value": "4.1%",
+      "label": "Instagram interaction rate",
+      "tag": "Instagram"
+    },
+    {
+      "value": "2.1K+",
+      "label": "Instagram engagements",
+      "tag": "Instagram"
+    },
+    {
+      "value": "56.2%",
+      "label": "TikTok traffic from organic search",
+      "tag": "TikTok"
+    },
+    {
+      "value": "95.7%",
+      "label": "Net-new viewers on YouTube long-form",
+      "tag": "YouTube"
+    },
+    {
+      "value": "3.1K+",
+      "label": "Content shares",
+      "tag": "All platforms"
+    },
+    {
+      "value": "17.4K+",
+      "label": "Profile discovery visits",
+      "tag": "All platforms"
+    }
+  ],
+  "audience": {
+    "age_range": "21–38",
+    "gender": "Men & women",
+    "markets": [
+      "Atlanta, GA",
+      "Richmond / DMV",
+      "Los Angeles, CA"
+    ]
+  },
+  "vertical_cards": {
+    "hospitality_travel": {
+      "blurb": "Hotel stays, property tours and room walk-throughs, including Nobu Hotel Atlanta.",
+      "image": "/uploads/card-hospitality.jpeg",
+      "image_alt": "TODO(copy)"
+    },
+    "culinary_dining": {
+      "blurb": "Chef features, steakhouse reviews and dining vlogs, from ML Steakhouse to Mastro's LA.",
+      "image": "/uploads/card-culinary.webp",
+      "image_alt": "TODO(copy)"
+    },
+    "style_grooming": {
+      "blurb": "Footwear and streetwear styling, on-foot looks and transit essentials in short-form video.",
+      "image": "/uploads/card-style-grooming.jpeg",
+      "image_alt": "TODO(copy)"
+    }
+  },
+  "about": {
+    "heading": "About",
+    "body": "Jordan Kenchen is a lifestyle creator working across hospitality and travel, culinary and dining, and style and grooming.\n\nJordan's video content has earned more than 500K organic views across YouTube, TikTok and Instagram, reaching men and women aged 21–38 in Atlanta, Richmond / the DMV and Los Angeles.\n\nRecent work includes a property tour at Nobu Hotel Atlanta, a chef feature and review at ML Steakhouse, and a dining vlog at Mastro's Steakhouse LA. Jordan is represented by Marquis Rogers of Full Circle Entertainment."
+  },
+  "contact": {
+    "heading": "Brand inquiries",
+    "intro": "For partnership and brand inquiries, send a message below."
+  }
+}
