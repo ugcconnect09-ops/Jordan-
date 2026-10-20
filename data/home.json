@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "Lifestyle Creator",
     "headline": "Jordan Kenchen",
-    "intro": "Lifestyle creator across hospitality, dining and style, with 500K+ organic video views on YouTube, TikTok and Instagram.",
+    "intro": "Lifestyle creator across hospitality, dining and style, with 500K+ organic video views on YouTube, TikTok and Instagram.\n\ni have the biggest instagram folowoing",
     "image": "/uploads/home-hero.webp",
     "image_alt": "Jordan Kenchen"
   },
@@ -43,7 +43,6 @@
       "image": "/uploads/logos/th.webp",
       "visible": true
     }
-
   ],
   "stats_heading": "By the numbers",
   "stats": [
