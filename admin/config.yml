@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ugcconnect09-ops/Jordan-
   branch: main
-  base_url: https://sveltia-cms-auth.ugcconnect09.workers.dev# build phase. MUST be main in the final merge (see pre-merge checklist)
+  base_url: https://sveltia-cms-auth.ugcconnect09.workers.dev
 
 media_folder: public/uploads
 public_folder: /uploads
