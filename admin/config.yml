@@ -1,10 +1,10 @@
 backend:
   name: github
   repo: ugcconnect09-ops/Jordan-
-  branch: master
+  branch: master   # must match the branch your site deploys from and where data/home.json lives
   base_url: https://sveltia-cms-auth.ugcconnect09.workers.dev
 
-media_folder: public/uploads
+media_folder: uploads
 public_folder: /uploads
 
 # Nesting confirmed against @sveltia/cms 0.173.0 type definitions:
@@ -23,7 +23,7 @@ collections:
     files:
       - name: site
         label: Site settings
-        file: public/data/site.json
+        file: data/site.json
         format: json
         fields:
           - { label: Brand name, name: brand_name, widget: string }
@@ -41,7 +41,7 @@ collections:
 
       - name: home
         label: Home page
-        file: public/data/home.json
+        file: data/home.json
         format: json
         fields:
           - label: Top of page
@@ -120,7 +120,7 @@ collections:
 
       - name: hospitality-travel
         label: Hospitality & Travel page
-        file: public/data/pages/hospitality-travel.json
+        file: data/pages/hospitality-travel.json
         format: json
         fields:
           - { label: Small label, name: eyebrow, widget: string, required: false }
@@ -162,7 +162,7 @@ collections:
 
       - name: culinary-dining
         label: Culinary & Dining page
-        file: public/data/pages/culinary-dining.json
+        file: data/pages/culinary-dining.json
         format: json
         fields:
           - { label: Small label, name: eyebrow, widget: string, required: false }
@@ -204,7 +204,7 @@ collections:
 
       - name: style-grooming
         label: Style & Grooming page
-        file: public/data/pages/style-grooming.json
+        file: data/pages/style-grooming.json
         format: json
         fields:
           - { label: Small label, name: eyebrow, widget: string, required: false }
