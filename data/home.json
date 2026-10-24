@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "Lifestyle Creator",
     "headline": "Jordan Kenchen",
-    "intro": "Lifestyle creator across hospitality, dining and style, with 500K+ organic video views on YouTube, TikTok and Instagram.",
+    "intro": "Lifestyle creator across hospitality, dining and style, with 500K+ organic video views on YouTube, TikTok and Instagram.\n\nI have a big instagram following",
     "image": "/uploads/home-hero.webp",
     "image_alt": "Jordan Kenchen"
   },
@@ -10,12 +10,12 @@
   "logos": [
     {
       "name": "givenchy",
-      "image": "/uploads/logos/givenchy-m.png",
+      "image": "/uploads/logos/gucci.png",
       "visible": true
     },
     {
       "name": "hugo",
-      "image": "/uploads/logos/hugo.jpg",
+      "image": "/uploads/logos/hugo.webp",
       "visible": true
     },
     {
@@ -25,12 +25,12 @@
     },
     {
       "name": "Saks Fifth Avenue",
-      "image": "/uploads/Harryslogoupdate+(1000+x+450+px).webp",
+      "image": "/uploads/logos/saks-fifth-avenue.webp",
       "visible": true
     },
     {
-      "name": "Steak",
-      "image": "/uploads/logos/steak.png",
+      "name": "Burberry",
+      "image": "/uploads/logos/burberry.png",
       "visible": true
     },
     {
@@ -41,49 +41,50 @@
     {
       "name": "th",
       "image": "/uploads/logos/th.webp",
-      "visible": false
+      "visible": true
     }
   ],
   "stats_heading": "By the numbers",
+  "stats_period": "Past 28 Days Performance",
   "stats": [
     {
       "value": "500K+",
-      "label": "Organic video views across YouTube, TikTok and Instagram",
+      "label": "Total reach: organic video views across YouTube, TikTok and Instagram",
       "tag": "All platforms"
     },
     {
       "value": "53K+",
-      "label": "Instagram views",
+      "label": "Instagram engagement: views",
       "tag": "Instagram"
     },
     {
       "value": "4.1%",
-      "label": "Instagram interaction rate",
+      "label": "Instagram engagement: interaction rate",
       "tag": "Instagram"
     },
     {
       "value": "2.1K+",
-      "label": "Instagram engagements",
+      "label": "Instagram engagement: total engagements",
       "tag": "Instagram"
     },
     {
       "value": "56.2%",
-      "label": "TikTok traffic from organic search",
+      "label": "Search-driven intent: TikTok traffic from organic search queries",
       "tag": "TikTok"
     },
     {
       "value": "95.7%",
-      "label": "Net-new viewers on YouTube long-form",
+      "label": "Content discovery: net-new viewers on YouTube long-form features",
       "tag": "YouTube"
     },
     {
       "value": "3.1K+",
-      "label": "Content shares",
+      "label": "High-intent engagement: content shares",
       "tag": "All platforms"
     },
     {
       "value": "17.4K+",
-      "label": "Profile discovery visits",
+      "label": "High-intent engagement: profile discovery visits",
       "tag": "All platforms"
     }
   ],

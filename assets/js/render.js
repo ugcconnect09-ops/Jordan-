@@ -178,12 +178,20 @@ function statNode(s) {
   ]);
 }
 
+const STATS_PERIOD_DEFAULT = "Past 28 Days Performance";
+
 function renderStats(root, home) {
   const stats = arr(home.stats).filter((s) => s && str(s.value) && str(s.label));
   if (!stats.length) return;
   const [lead, ...rest] = stats;
+  // Time-period badge beside the section title. Shows the default text when "stats_period" is missing
+  // from the JSON; set "stats_period" to "" (empty) to hide it.
+  const period = typeof home.stats_period === "string" ? home.stats_period.trim() : STATS_PERIOD_DEFAULT;
+  const badge = period ? el("p", { class: "badge reveal" }, [el("span", { class: "badge__dot", "aria-hidden": "true" }), period]) : null;
+  const title = head("Impact", home.stats_heading);
+  const top = title || badge ? el("div", { class: "stats-head" }, [title, badge]) : null;
   root.replaceChildren(wrap(
-    head("Impact", home.stats_heading),
+    top,
     el("div", { class: "stats-lead" }, statNode(lead)),
     rest.length ? el("div", { class: "stats-grid" }, rest.map(statNode)) : null,
   ));

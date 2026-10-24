@@ -160,13 +160,13 @@ ul, ol { padding: 0; list-style: none; }
 @keyframes cue { 0% { top: -40%; } 100% { top: 100%; } }
 
 /* ---------- Trust strip ---------- */
-.trust { padding-block: 72px; border-bottom: 1px solid var(--line); }
-.trust__head { margin-bottom: 36px; }
-.logos { display: flex; flex-wrap: wrap; align-items: center; gap: 32px 56px; }
-.logo { height: 44px; display: flex; align-items: center; }
+.trust { padding-block: 88px; border-bottom: 1px solid var(--line); }
+.trust__head { margin-bottom: 44px; font-size: 13px; color: var(--metal-hi); }
+.logos { display: flex; flex-wrap: wrap; align-items: center; gap: 40px 64px; }
+.logo { height: 64px; display: flex; align-items: center; }
 .logo img {
-  height: 100%; width: auto; max-width: 180px; object-fit: contain;
-  filter: grayscale(1) brightness(0) invert(1); opacity: .7; transition: opacity .35s var(--ease);
+  height: 100%; width: auto; max-width: 260px; object-fit: contain;
+  filter: grayscale(1) brightness(0) invert(1); opacity: .95; transition: opacity .35s var(--ease);
 }
 .logo:hover img { opacity: 1; }
 .logo__text { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .14em; color: var(--text-faint); white-space: nowrap; }
@@ -184,6 +184,17 @@ ul, ol { padding: 0; list-style: none; }
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
 .stats-grid .stat { display: grid; align-content: start; gap: 12px; padding: 36px 28px 36px 0; border-bottom: 1px solid var(--line); }
 .stats-grid .stat__value { font-size: clamp(40px, 4.4vw, 60px); }
+
+/* Stats title row: title on the left, "Past 28 Days Performance" badge on the right */
+.stats-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 32px; margin-bottom: 56px; }
+.stats-head .section-head { margin-bottom: 0; }
+.badge {
+  display: inline-flex; align-items: center; gap: 10px; width: fit-content;
+  padding: 11px 18px; border: 1px solid var(--line-strong); border-radius: 999px;
+  background: rgba(236, 233, 226, .05); color: var(--metal-hi);
+  font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; line-height: 1; white-space: nowrap;
+}
+.badge__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--metal-hi); flex: none; }
 
 /* ---------- Audience ---------- */
 .audience { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
@@ -321,8 +332,11 @@ ul, ol { padding: 0; list-style: none; }
   .site-header { padding-block: 20px; }
   .form__row { grid-template-columns: 1fr; }
   .section-head { margin-bottom: 36px; }
-  .trust { padding-block: 56px; }
-  .logos { gap: 28px 36px; }
+  .stats-head { margin-bottom: 36px; }
+  .trust { padding-block: 68px; }
+  .logos { gap: 32px 40px; }
+  .logo { height: 62px; }
+  .logo img { max-width: 230px; }
   .hero__inner { padding-block: 120px 56px; }
   .scroll-cue { display: none; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }

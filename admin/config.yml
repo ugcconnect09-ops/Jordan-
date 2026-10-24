@@ -64,6 +64,7 @@ collections:
               - { label: Logo, name: image, widget: image }
               - { label: Show on site, name: visible, widget: boolean, default: true }
           - { label: Stats title, name: stats_heading, widget: string, default: "By the numbers" }
+          - { label: Stats time period badge, name: stats_period, widget: string, required: false, default: "Past 28 Days Performance", hint: "Badge beside the stats title. Leave empty to hide it." }
           - label: Stats
             name: stats
             widget: list
