@@ -189,12 +189,12 @@ ul, ol { padding: 0; list-style: none; }
 .stats-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 32px; margin-bottom: 56px; }
 .stats-head .section-head { margin-bottom: 0; }
 .badge {
-  display: inline-flex; align-items: center; gap: 10px; width: fit-content;
-  padding: 11px 18px; border: 1px solid var(--line-strong); border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 15px; width: fit-content;
+  padding: 16px 27px; border: 1px solid var(--line-strong); border-radius: 999px;
   background: rgba(236, 233, 226, .05); color: var(--metal-hi);
-  font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; line-height: 1; white-space: nowrap;
+  font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; line-height: 1; white-space: nowrap;
 }
-.badge__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--metal-hi); flex: none; }
+.badge__dot { width: 10px; height: 10px; border-radius: 50%; background: var(--metal-hi); flex: none; }
 
 /* ---------- Audience ---------- */
 .audience { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
@@ -333,6 +333,7 @@ ul, ol { padding: 0; list-style: none; }
   .form__row { grid-template-columns: 1fr; }
   .section-head { margin-bottom: 36px; }
   .stats-head { margin-bottom: 36px; }
+  .badge { font-size: 14px; padding: 13px 22px; gap: 12px; white-space: normal; }  /* keeps the bigger badge from overflowing phones */
   .trust { padding-block: 68px; }
   .logos { gap: 32px 40px; }
   .logo { height: 62px; }
